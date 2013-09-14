@@ -20,7 +20,7 @@ It is recommended to run this in [Screen](http://en.wikipedia.org/wiki/GNU_Scree
 You can do that like so:
 
 ```
-root@raspberrypi:~# screen -dS InternetMon ./Run.sh
+root@raspberrypi:~# screen -dmS InternetMon ./Run.sh
 root@raspberrypi:~#
 ```
 
