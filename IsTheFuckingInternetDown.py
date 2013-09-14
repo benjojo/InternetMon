@@ -16,7 +16,7 @@ def GetConfigPart(target):
 def ContactHost(url,info):
     params = urllib.urlencode({'timedown': info})
     headers = {"Content-type": "application/x-www-form-urlencoded","Accept": "text/plain"}
-    conn = httplib.HTTPConnection(url.split('/')[0])
+    conn = httplib.HTTPConnection(url[:url.index("/",7)])
     conn.request("POST", url[url.index("/",7):], params, headers)
     response = conn.getresponse()
     print response.status, response.reason
