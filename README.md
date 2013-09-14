@@ -16,3 +16,12 @@ root@raspberrypi:~# python IsTheFuckingInternetDown.py
 ```
 
 It is recommended to run this in [Screen](http://en.wikipedia.org/wiki/GNU_Screen) to make sure its running all the time.
+
+You can do that like so:
+
+```
+root@raspberrypi:~# screen -dS InternetMon ./Run.sh
+root@raspberrypi:~#
+```
+
+It will then run on its own until the system dies.
