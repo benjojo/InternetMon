@@ -25,3 +25,19 @@ root@raspberrypi:~#
 ```
 
 It will then run on its own until the system dies.
+
+##URL Logging
+There is functionality to allow when internet comes back up on the host. For a POST request to be sent to a URL of your choice, This URL can then do whatever you want.
+
+Even tweet a complaint to the ISP for you!
+
+To have this functionality to work you will need to check in `config.cfg` and set a URL as follows
+```
+contacturl=http://server.somewhere.dev/internettracker.php
+```
+
+The variable that is sent is the time that the internet was unavailable for and is called `timedown` and can be grabbed in php like so:
+```php
+<?php
+$TimeDown = (int)$_POST['timedown']
+```
